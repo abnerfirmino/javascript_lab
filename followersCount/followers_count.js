@@ -21,3 +21,13 @@ function checkCountValue() {
         alert("Sua postagem obteve mais 20 seguidores! Continue postando!");
     }
 }
+
+function resetState() {
+    count = 0;
+}
+
+function resetFollowers() {
+    resetState(); // reseta o número de seguidores
+    displayCount();
+    alert("Seu número de seguidores foi resetado!")
+}

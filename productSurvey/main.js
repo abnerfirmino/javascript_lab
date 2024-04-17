@@ -1,23 +1,12 @@
 // variáveis de validação do formulário
-const namE = document.getElementById('name').value;
-const age = document.getElementById('age').value;
-const email = document.getElementById('email').value;
-const job = document.getElementById('job').value;
-const designation = document.getElementById('designation').value;
-const productType = document.getElementById('productType').value;
-const feedbackText = document.getElementById('feedbackText').value;
+const username = document.getElementById('name');
+const age = document.getElementById('age');
+const email = document.getElementById('email');
+const job = document.getElementById('job');
+const designation = document.getElementById('designation');
+const productType = document.getElementById('productType');
+const feedbackText = document.getElementById('feedbackText');
 const submitButton = document.getElementById('submitBtn');
-
-function submitFeedback() {
-    alert('Thank you for your valuable feedback');
-    document.getElementById('userName').innerHTML = namE;
-    document.getElementById('userAge').innerHTML = age;
-    document.getElementById('userEmail').innerHTML = email;
-    document.getElementById('userJob').innerHTML = job;
-    document.getElementById('userDesignation').innerHTML = designation;
-    document.getElementById('userProductChoice').innerHTML = productType;
-    document.getElementById('userInfo').style.display = 'block';
-}
 
 // Evento de clique
 submitButton.onclick = submitFeedback;
@@ -27,3 +16,15 @@ document.addEventListener('keydown', function(event) {
         submitFeedback();
     }
 });
+
+function submitFeedback() {
+    alert('Thank you for your valuable feedback');
+    document.getElementById('userName').innerHTML = username.value;
+    document.getElementById('userAge').innerHTML = age.value;
+    document.getElementById('userEmail').innerHTML = email.value;
+    document.getElementById('userJob').innerHTML = job.value;
+    document.getElementById('userDesignation').innerHTML = designation.value;
+    document.getElementById('userProductChoice').innerHTML = productType.value;
+    document.getElementById('userFeedback').innerHTML = feedbackText.value;
+    document.getElementById('userInfo').style.display = 'block';
+}
